@@ -1,1 +1,4 @@
 /.pytest_cache/
+/selenium_env/
+/.idea/
+/__pycache__/
