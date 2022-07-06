@@ -29,6 +29,15 @@ class ProductPage(BasePage):
         book_price = self.browser.find_element(*ProductPageLocators.BOOK_PRICE).text
         assert book_price == book_price_messages, "Something wrong with product price"
 
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+        "Success message is presented, but should not be"
+
+    def success_message_should_disappear(self):
+        assert  not self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE),\
+        "Success message is not presented< but should and then disapper"
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+        "Success message should disapper but not"
 #browser=webdriver.Chrome()
 #link = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/?promo=newYear"
 #product_page=ProductPage(browser, link)

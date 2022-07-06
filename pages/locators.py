@@ -8,6 +8,7 @@ class LoginPageLocators:
     REGISTER_FORM = (By.ID, "register_form")
 
 class ProductPageLocators:
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "div.alertinner strong")
     BASKET_BUTTON=(By.CSS_SELECTOR, "button.btn-add-to-basket")
     BOOK_NAME_MESSAGES=(By.CSS_SELECTOR,"#messages strong")
     BOOK_NAME = (By.CSS_SELECTOR, ".breadcrumb li.active")
