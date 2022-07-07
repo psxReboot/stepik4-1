@@ -38,3 +38,4 @@ class ProductPage(BasePage):
         "Success message is not presented< but should and then disapper"
         assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
         "Success message should disapper but not"
+

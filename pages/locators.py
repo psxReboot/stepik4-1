@@ -4,9 +4,11 @@ class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     USER_ICON = (By.CSS_SELECTOR, ".icon-user")
+    BASKET = (By.XPATH, "//*[@id='default']/header/div[1]/div/div[2]/span/a")
 
 class MainPageLocators:
     LOGIN_LINK=(By.CSS_SELECTOR, "#login_link")
+    BASKET = (By.CSS_SELECTOR, "#default > header > div.navbar.primary.navbar-static-top.navbar-inverse > div > a")
 
 class LoginPageLocators:
     LOGIN_FORM=(By.ID, "login_form")
@@ -24,3 +26,6 @@ class ProductPageLocators:
     BOOK_PRICE_MESSAGE = (By.CSS_SELECTOR, ".alertinner p strong")
     BOOK_PRICE = (By.CSS_SELECTOR, "p.price_color")
 
+class BasketPageLocators:
+    ITEMSTOBUY=(By.CSS_SELECTOR, "#content_inner > div.basket-title.hidden-xs > div > h2")
+    EMPTYMESSAGE=(By.CSS_SELECTOR, "#content_inner > p")
