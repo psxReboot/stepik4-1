@@ -27,5 +27,5 @@ class ProductPageLocators:
     BOOK_PRICE = (By.CSS_SELECTOR, "p.price_color")
 
 class BasketPageLocators:
-    ITEMSTOBUY=(By.CSS_SELECTOR, "#content_inner > div.basket-title.hidden-xs > div > h2")
+    ITEMSTOBUY=(By.CSS_SELECTOR, ".basket-items")
     EMPTYMESSAGE=(By.CSS_SELECTOR, "#content_inner > p")
