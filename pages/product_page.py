@@ -1,8 +1,8 @@
-import time
-from selenium import webdriver
+
 from .base_page import BasePage
 from .locators import ProductPageLocators
-from selenium.webdriver.common.by import By
+
+
 class ProductPage(BasePage):
 
     def add_to_basket_and_check(self):
@@ -38,10 +38,3 @@ class ProductPage(BasePage):
         "Success message is not presented< but should and then disapper"
         assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
         "Success message should disapper but not"
-#browser=webdriver.Chrome()
-#link = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/?promo=newYear"
-#product_page=ProductPage(browser, link)
-#product_page.add_to_basket()
-##time.sleep(10)
-#product_page.check_added_book_name()
-#product_page.check_added_book_price()
